@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LayoutsTest</string>
+    <string name="Row1">RowOne</string>
+    <string name="Col1">Column One</string>
+    <string name="Column2">Column Two</string>
+    <string name="Col3">Column Three</string>
+    <string name="Col4">Column Four</string>
+    <string name="Row2">Row Two</string>
+    <string name="Row3">Row Three</string>
+    <string name="Row4">Row Four</string>
+</resources>
