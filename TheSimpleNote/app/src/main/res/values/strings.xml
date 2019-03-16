@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TheSimpleNote</string>
+    <string name="Title">Title</string>
+    <string name="BodyTitle">Body</string>
+    <string name="BodyHint">Insert note here</string>
+    <string name="NextButton">next</string>
+    <string name="CloseButton">close</string>
+</resources>

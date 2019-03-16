@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">الملاحظات البسيطة</string>
+    <string name="Title">العنوان</string>
+    <string name="BodyTitle">النص</string>
+    <string name="BodyHint">ادخل النص هنا</string>
+    <string name="NextButton">التالي</string>
+    <string name="CloseButton">اغلاق</string>
+</resources>
