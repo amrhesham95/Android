@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FragmentBackStack</string>
+    <string name="addfirstfragment">Add Fragment 1</string>
+    <string name="addsecondfragment">Add Fragment 2</string>
+    <string name="addthirdfragment">Add fragment 3</string>
+    <string name="removefragment">remove fragment</string>
+    <string name="replace">Replace fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="title_activity_third">thirdActivity</string>
+    <string name="three">3</string>
+</resources>
