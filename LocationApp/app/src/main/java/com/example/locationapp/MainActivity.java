@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnGetLocation;
     Button btnSOS;
+    Button btnShowMap;
     LocationManager locationManager;
     MyLocationListener locationListener;
     Location myLocationGlobal;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnGetLocation = findViewById(R.id.btnGetLocationID);
         btnSOS=findViewById(R.id.btnSOSID);
+        btnShowMap=findViewById(R.id.btnShowMapID);
         locationListener=new MyLocationListener();
         btnGetLocation.setOnClickListener((v) -> {
             locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -66,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
             smsIntent.putExtra("address"  , "0123456789");
             smsIntent.putExtra("sms_body"  , smsLocation);
             startActivity(smsIntent);
+        });
+        btnShowMap.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this,GoogleMapsActivity.class);
+            startActivity(intent);
+
         });
 
     }
@@ -106,4 +113,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 }
