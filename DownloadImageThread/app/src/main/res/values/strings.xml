@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DownloadImageThread</string>
+    <string name="DownloadImage">download image</string>
+    <string name="flag">https://www.androidbegin.com/tutorial/flag/nigeria.png</string>
+</resources>
