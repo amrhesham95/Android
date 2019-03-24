@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnShowMap;
     LocationManager locationManager;
     MyLocationListener locationListener;
-    Location myLocationGlobal;
+    public static Location myLocationGlobal;
     String smsLocation;
     private static final int PERM_REQ=0;
     List<Address> addressList;
