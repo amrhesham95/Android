@@ -8,13 +8,14 @@ import android.util.Log;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements Communicator{
+    FragmentTextView fragmentTextView;
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.i("nouran","destroy is called");
     }
 
-    FragmentTextView fragmentTextView;
+
     @Override
     public void response(String data) {
 
