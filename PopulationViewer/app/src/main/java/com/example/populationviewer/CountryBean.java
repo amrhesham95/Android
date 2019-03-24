@@ -1,6 +1,11 @@
 package com.example.populationviewer;
 
 public class CountryBean {
+
+    private String rank;
+    private String population;
+    private String name;
+    private String picURL;
     public String getRank() {
         return rank;
     }
@@ -33,8 +38,4 @@ public class CountryBean {
         this.picURL = picURL;
     }
 
-    private String rank;
-    private String population;
-    private String name;
-    private String picURL;
 }
