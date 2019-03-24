@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layOutID"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/leftLayOutID"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <fragment
+            android:id="@+id/leftFragmentID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.countrieswithlistview.listViewFragment"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightLayOutID"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/rightFragmentID"
+            android:name="com.example.countrieswithlistview.fullViewFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>
