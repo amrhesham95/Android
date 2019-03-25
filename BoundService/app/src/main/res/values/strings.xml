@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BoundService</string>
+    <string name="showdate">Show Date</string>
+</resources>
