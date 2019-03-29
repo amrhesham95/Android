@@ -1,4 +1,4 @@
-package com.example.populationviewer;
+package com.example.populationviewer.model;
 
 public class CountryBean {
 
