@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginMVP</string>
+    <string name="password">password</string>
+    <string name="signin">signin</string>
+    <string name="signup">signup</string>
+    <string name="username">username</string>
+</resources>
