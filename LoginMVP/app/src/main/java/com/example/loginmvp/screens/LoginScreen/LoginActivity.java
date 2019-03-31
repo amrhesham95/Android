@@ -1,6 +1,7 @@
-package com.example.loginmvp.screens;
+package com.example.loginmvp.screens.LoginScreen;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -8,13 +9,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.loginmvp.R;
+import com.example.loginmvp.screens.SignupScreen.SignupActivity;
 
-public class MainActivity extends AppCompatActivity implements MainContract.IMainView {
+public class LoginActivity extends AppCompatActivity implements LoginContract.IMainView {
     EditText usernameTF;
     EditText passwordTF;
     Button signinBtn;
     Button signupBtn;
-    MainContract.IMainPresenter mainPresenter;
+    LoginContract.IMainPresenter mainPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +25,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.IMai
         passwordTF=findViewById(R.id.passwordTFID);
         signinBtn=findViewById(R.id.signinBtnID);
         signupBtn=findViewById(R.id.signupBtnID);
-        mainPresenter=new Presenter(this,getApplicationContext());
+        mainPresenter=new LoginPresenter(this,getApplicationContext());
         signupBtn.setOnClickListener((event)->{
-            mainPresenter.signupHandler();
+            Intent intent =new Intent(this, SignupActivity.class);
+            startActivity(intent);
         });
 
         signinBtn.setOnClickListener((event)->{

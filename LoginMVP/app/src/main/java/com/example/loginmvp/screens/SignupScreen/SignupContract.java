@@ -1,17 +1,14 @@
-package com.example.loginmvp.screens;
+package com.example.loginmvp.screens.SignupScreen;
 
 import android.content.Context;
 
-public interface MainContract {
-    interface IMainPresenter{
+public interface SignupContract {
+    interface SignupPresenter{
 
-        void signinHandler();
         void  signupHandler();
     }
 
-    interface IMainView{
-        void loginSucess();
-        void loginFailed();
+    interface SignupView{
         void signupSuccess();
         void signupFailed();
         String getUsername();

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.LoginScreen.LoginActivity">
+    tools:context=".screens.SignupScreen.SignupActivity">
 
     <EditText
         android:id="@+id/usrNameTFID"
@@ -38,17 +38,6 @@
         app:layout_constraintTop_toBottomOf="@+id/usrNameTFID"
         android:hint="@string/password"/>
 
-    <Button
-        android:id="@+id/signinBtnID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/signin"
-        app:layout_constraintEnd_toStartOf="@+id/signupBtnID"
-        app:layout_constraintStart_toStartOf="@+id/passwordTFID"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTFID"
-        />
 
     <Button
         android:id="@+id/signupBtnID"
