@@ -23,9 +23,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.IMai
         passwordTF=findViewById(R.id.passwordTFID);
         signinBtn=findViewById(R.id.signinBtnID);
         signupBtn=findViewById(R.id.signupBtnID);
-        mainPresenter=new Presenter(this);
+        mainPresenter=new Presenter(this,getApplicationContext());
         signupBtn.setOnClickListener((event)->{
             mainPresenter.signupHandler();
+        });
+
+        signinBtn.setOnClickListener((event)->{
+            mainPresenter.signinHandler();
         });
 
     }

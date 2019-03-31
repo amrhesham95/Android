@@ -6,9 +6,10 @@ import com.example.loginmvp.model.IModel;
 import com.example.loginmvp.model.Model;
 
 public class Presenter implements MainContract.IMainPresenter{
-    public Presenter(MainContract.IMainView mainView) {
+    public Presenter(MainContract.IMainView mainView,Context context) {
         this.mainView = mainView;
         model=new Model();
+        this.context=context;
     }
 
     MainContract.IMainView mainView;
@@ -18,7 +19,14 @@ public class Presenter implements MainContract.IMainPresenter{
     Context context;
     @Override
     public void signinHandler() {
-
+        username=mainView.getUsername();
+        password=mainView.getPassword();
+        context=mainView.getContext();
+        if(model.checkUser(context,username,password)){
+            mainView.loginSucess();
+        }else{
+            mainView.loginFailed();
+        }
     }
 
     @Override
