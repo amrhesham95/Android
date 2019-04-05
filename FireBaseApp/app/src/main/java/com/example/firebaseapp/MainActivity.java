@@ -18,6 +18,8 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG ="google" ;
@@ -32,11 +34,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnEmailPassword=findViewById(R.id.btnEmailPassword);
         googleLoginBtn=findViewById(R.id.googleBtnID);
+        //notification token
+        //cOe8V4169Us:APA91bG9a9iU0hmQ0mZFwLmam_FBiAB_ISLNiMw4Fpq_f1ygvvda8Fn9L2kHgaWrahJJN3zdLeolmPD0oDoKnn37ycqf1h3p5y27_HQpqfxS1KtF6e4FIbrlmgNUlZAQwsqepKgm24TK
         btnEmailPassword.setOnClickListener((v)->{
             Intent intent=new Intent(this,loginActivity.class);
             startActivity(intent);
         });
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(Task<InstanceIdResult> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "getInstanceId failed", task.getException());
+                            return;
+                        }
 
+                        // Get new Instance ID token
+                        String token = task.getResult().getToken();
+
+                        // Log and toast
+                        //String msg = getString(R.string.msg_token_fmt, token);
+                        Log.i("token", token);
+                        Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();
+                    }
+                });
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
